@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="232.54613mm"
+   height="248.19379mm"
+   viewBox="0 0 232.54613 248.19379"
+   version="1.1"
+   id="svg10542"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="bigstars.svg">
+  <defs
+     id="defs10536" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#2e2e32"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="400"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1008"
+     inkscape:window-height="968"
+     inkscape:window-x="1799"
+     inkscape:window-y="584"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata10539">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 43.089286,51.779185 1.333147,4.340226 4.340225,1.333147 -4.340225,1.333147 -1.333147,4.339873 -1.3335,-4.339873 -4.339873,-1.333147 4.339873,-1.333147 1.3335,-4.340226"
+       style="fill:#e8e8e7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0352778"
+       id="path6837" />
+    <path
+       d="m 197.30357,106.20776 1.33315,4.34022 4.34023,1.33315 -4.34023,1.33315 -1.33315,4.33987 -1.3335,-4.33987 -4.33987,-1.33315 4.33987,-1.33315 1.3335,-4.34022"
+       style="fill:#e8e8e7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0352778"
+       id="path6837-6" />
+    <path
+       d="m 29.482317,172.80044 1.671814,5.44371 5.444067,1.67217 -5.444067,1.67252 -1.671814,5.44406 -1.672167,-5.44406 -5.444067,-1.67252 5.444067,-1.67217 1.672167,-5.44371"
+       style="fill:#e8e8e7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0352778"
+       id="path6817" />
+  </g>
+</svg>
