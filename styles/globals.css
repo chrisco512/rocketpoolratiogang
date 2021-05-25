@@ -8,6 +8,7 @@ body {
   background-image: url('/milkystuff.svg');
   background-size: cover;
   background-repeat: repeat-y;
+  overflow-x: hidden;
 }
 
 a {

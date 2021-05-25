@@ -19,7 +19,7 @@ function MilestoneTippy({
     <Tippy
       content={
         <div>
-          <div>{milestoneRatio.toFixed(6)}</div>
+          <div>Ξ{milestoneRatio.toFixed(6)}</div>
           <div style={{ color: '#DBC206' }}>
             (${(ethUsdPrice * milestoneRatio).toFixed(2)})
           </div>
@@ -93,7 +93,7 @@ function ThumbTippy({
     <Tippy
       content={
         <div>
-          <div>{!touched ? ethRatio : sliderTwoRatio.toFixed(6)}</div>
+          <div>Ξ{!touched ? ethRatio : sliderTwoRatio.toFixed(6)}</div>
           <div style={{ color: '#DBC206' }}>
             (${!touched
               ? rplUsdPrice

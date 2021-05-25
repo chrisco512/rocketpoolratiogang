@@ -29,7 +29,25 @@ export default function ParallaxImage({ src, offsetAdd = 3, ...style }) {
   return (
     <div ref={ref} className="image-container">
       <motion.div className={styles.flickerEffect} style={{ ...style, y }}>
-        <BigStar />
+        <svg width={style.width} height={style.height} class="pattern-swatch">
+          <defs>
+            <pattern
+              id="stars-1"
+              patternUnits="userSpaceOnUse"
+              width="232.54613mm"
+              height="248.19379mm"
+            >
+              <BigStar />
+            </pattern>
+          </defs>
+          <rect
+            style={{ fill: 'url(#stars-1) #fff' }}
+            x="0"
+            y="0"
+            height={style.height}
+            width={style.width}
+          />
+        </svg>
       </motion.div>
     </div>
   );
