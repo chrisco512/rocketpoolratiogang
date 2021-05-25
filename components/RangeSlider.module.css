@@ -22,6 +22,7 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
+  border: transparent;
   background: url('/rocketpooliconwithexhaust.svg');
   background-position: center center;
   background-size: contain;
@@ -34,6 +35,7 @@
 }
 
 .slider::-moz-range-thumb {
+  appearance: none;
   border: transparent;
   background: url('/rocketpooliconwithexhaust.svg');
   background-position: center center;
