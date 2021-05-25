@@ -1,21 +1,27 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light-border.css';
 
+import Megatron from '../components/Megatron';
+import RangeSlider from '../components/RangeSlider';
 import usePromise from '../lib/hooks/usePromise';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   const [result, error, isLoading] = usePromise(() =>
     fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool&vs_currencies=eth%2Cusd`
+      `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool,ethereum&vs_currencies=eth%2Cusd`
     ).then(r => r.json())
   );
 
-  let ethRatio, usdRatio;
+  let ethRatio, rplUsdPrice, ethUsdPrice;
 
   if (result && !isLoading) {
-    ethRatio = result['rocket-pool'].eth;
-    usdRatio = result['rocket-pool'].usd;
+    ethRatio = result['rocket-pool'].eth.toFixed(6);
+    rplUsdPrice = result['rocket-pool'].usd;
+    ethUsdPrice = result['ethereum'].usd;
   }
 
   return (
@@ -32,96 +38,34 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1
-          className={styles.title}
-          style={{ fontWeight: 'bold', fontSize: 36 }}
-        >
-          ROCKET<span style={{ color: '#F9DE1A' }}>POOL</span>
-        </h1>
-        <h2
+        <div
           style={{
-            marginTop: 4,
-            fontSize: 32,
+            marginBottom: 32,
           }}
         >
-          RATIOGANG
-        </h2>
-
-        <div style={{ marginBottom: 32 }}>
-          <img src="/exhaust.svg" width={50} height={100} />
-          <img src="/rocketpooliconwithexhaust.svg" height={100} />
+          <Megatron
+            isLoading={isLoading}
+            result={result}
+            rplUsdPrice={rplUsdPrice}
+            ethRatio={ethRatio}
+          />
         </div>
-
-        <div style={{ display: 'flex' }}>
-          <div
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.15)',
-              color: 'white',
-              fontWeight: 400,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: 160,
-              borderTopLeftRadius: 5,
-              borderBottomLeftRadius: 5,
-              padding: 16,
-              borderWidth: 1,
-              borderColor: 'white',
-              borderStyle: 'solid',
-            }}
-          >
-            {!isLoading && result ? (
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <span style={{ fontSize: 20, marginRight: 4 }}>Ξ</span>
-                <span style={{ fontSize: 18 }}>{ethRatio}</span>
-              </div>
-            ) : null}
-          </div>
-          <div
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.15)',
-              borderColor: 'white',
-              borderTopWidth: 1,
-              borderRightWidth: 1,
-              borderBottomWidth: 1,
-              borderLeftWidth: 0,
-              borderStyle: 'solid',
-              color: 'white',
-              fontWeight: 400,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: 160,
-              borderTopRightRadius: 5,
-              borderBottomRightRadius: 5,
-              padding: 16,
-            }}
-          >
-            {!isLoading && result ? (
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <span style={{ fontSize: 22, marginRight: 4 }}>$</span>
-                <span style={{ fontSize: 20 }}>
-                  {Number(usdRatio).toFixed(2)}
-                </span>
-              </div>
-            ) : null}
-          </div>
+        <div
+          style={{
+            marginTop: 120,
+            marginBottom: 152,
+            width: '100%',
+            maxWidth: 640,
+          }}
+        >
+          <RangeSlider
+            ethRatio={ethRatio}
+            ethUsdPrice={ethUsdPrice}
+            rplUsdPrice={rplUsdPrice}
+            isLoading={isLoading}
+            result={result}
+          />
         </div>
-
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>

@@ -10,6 +10,8 @@
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@popperjs/core": "^2.9.2",
+    "@tippyjs/react": "^4.2.5",
     "eslint": "^6.8.0",
     "framer-motion": "^4.1.17",
     "next": "10.2.2",

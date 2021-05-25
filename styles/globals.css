@@ -18,3 +18,40 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.tippy-box[data-theme~='tomato'] {
+  background-color: cornflowerblue;
+  color: #f9de1a;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tippy-box[data-theme~='tomato'] .tippy-arrow {
+  color: cornflowerblue;
+}
+
+.tippy-box[data-theme~='greentomato'] {
+  background-color: #49beaa;
+  color: #f9de1a;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tippy-box[data-theme~='greentomato'] .tippy-arrow {
+  color: #49beaa;
+}
+
+.tippy-box[data-theme~='greentomato'] button {
+  margin-top: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #f9de1a;
+  background-color: #2b786b;
+  border: 1px solid #49dcb1;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+}

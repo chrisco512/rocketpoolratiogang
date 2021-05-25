@@ -1,0 +1,48 @@
+.slideContainer {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 4px;
+  position: relative;
+  height: 7px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 9px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #04aa6d;
+  background: url('/rocketpooliconwithexhaust.svg');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 125px;
+  margin-top: 1px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  background: #04aa6d;
+  background: url('/rocketpooliconwithexhaust.svg');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 125px;
+  margin-top: 1px;
+  margin-left: 5px;
+  cursor: pointer;
+}

@@ -8,6 +8,7 @@
 }
 
 .main {
+  z-index: 10;
   padding: 5rem 0;
   flex: 1;
   display: flex;
@@ -133,3 +134,37 @@
 .flickerEffect {
   animation: flicker 1.9s infinite ease-in;
 }
+
+.arrow,
+.arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.arrow {
+  visibility: hidden;
+}
+
+.arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+/* .tooltip[data-popper-placement^='top'] > #arrow {
+  bottom: -4px;
+}
+
+.tooltip[data-popper-placement^='bottom'] > #arrow {
+  top: -4px;
+}
+
+.tooltip[data-popper-placement^='left'] > #arrow {
+  right: -4px;
+}
+
+.tooltip[data-popper-placement^='right'] > #arrow {
+  left: -4px;
+} */
