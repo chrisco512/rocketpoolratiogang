@@ -1,6 +1,6 @@
 # ROCKETPOOL RATIOGANG
 
-This is a hype site for [Rocketpool](https://rocketpool.net), the first decentralized staking pool for Ethereum.
+This is a hype site for <a href="https://rocketpool.net" target="_blank">Rocketpool</a>, the first decentralized staking pool for Ethereum.
 
 ## Deploy on Vercel
 
