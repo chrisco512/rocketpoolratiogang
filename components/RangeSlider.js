@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { sticky, inlinePositioning } from 'tippy.js';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light-border.css';
+import 'tippy.js/animations/scale.css';
 
 import styles from './RangeSlider.module.css';
 import image from 'next/image';
@@ -34,15 +36,22 @@ function MilestoneTippy({
           </div>
         </div>
       }
+      // appendTo={() => window.document.body}
       theme="tomato"
       visible={true}
       placement="bottom"
-      interactive={true}
+      animation={false}
+      // interactive={true}
+      // duration={[0, 0]}
+      // inlinePositioning={true}
+      plugins={[inlinePositioning, sticky]}
       offset={[0, 60]}
-      moveTransition="none"
+      moveTransition="transform 0s ease-out"
+      sticky={true}
+      // inertia={false}
       popperOptions={{
-        strategy: 'fixed',
         modifiers: [
+          // { name: 'computeStyles', options: { adaptive: false } },
           { name: 'flip', options: { fallbackPlacements: ['bottom'] } },
         ],
       }}
@@ -115,7 +124,7 @@ function ThumbTippy({
       interactive={true}
       moveTransition="none"
       popperOptions={{
-        strategy: 'fixed',
+        // strategy: 'fixed',
         modifiers: [{ name: 'flip', options: { fallbackPlacements: ['top'] } }],
       }}
     >
