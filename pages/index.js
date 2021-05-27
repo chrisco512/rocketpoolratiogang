@@ -41,11 +41,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div
-          style={{
-            marginBottom: 32,
-          }}
-        >
+        <div className={styles.megatronContainer}>
           <Megatron
             isLoading={isLoading}
             result={result}

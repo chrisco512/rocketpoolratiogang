@@ -1,0 +1,134 @@
+.megatron {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.titleContainer {
+  padding: 16px;
+  display: flex;
+}
+
+.rocketpoolLogoContainer {
+  width: 68px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleTextRPL {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.titleTextPool {
+  color: #f9de1a;
+}
+
+.titleTextRG {
+  margin-bottom: 0;
+  margin-top: -4px;
+  font-size: 32px;
+}
+
+.titleMoneyContainer {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+.titleEthContainer {
+  color: white;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-right: 1px solid white;
+  width: 50%;
+}
+
+.titleEthContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleEthLogo {
+  margin-right: 4px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleEthRatio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.titleDollarContainer {
+  color: white;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 16px;
+}
+
+.titleDollarContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleDollarLogo {
+  margin-right: 4px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleDollarRatio {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .rocketpoolLogoContainer {
+    width: 48px;
+  }
+
+  .titleTextRPL {
+    font-size: 24px;
+  }
+
+  .titleTextRG {
+    font-size: 22px;
+  }
+
+  .titleEthLogo {
+    width: 24px;
+  }
+
+  .titleDollarLogo {
+    width: 24px;
+  }
+}

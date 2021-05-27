@@ -21,38 +21,80 @@ a {
 }
 
 .tippy-box[data-theme~='tomato'] {
-  background-color: cornflowerblue;
-  color: #f9de1a;
-  font-size: 16px;
+  background-color: #11b5e4;
+  color: white;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
 
 .tippy-box[data-theme~='tomato'] .tippy-arrow {
-  color: cornflowerblue;
+  color: #11b5e4;
 }
 
 .tippy-box[data-theme~='greentomato'] {
-  background-color: #49beaa;
-  color: #f9de1a;
-  font-size: 16px;
+  background-color: #6a994e;
+  color: white;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
 
 .tippy-box[data-theme~='greentomato'] .tippy-arrow {
-  color: #49beaa;
+  color: #6a994e;
 }
 
 .tippy-box[data-theme~='greentomato'] button {
   margin-top: 8px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  color: #f9de1a;
-  background-color: #2b786b;
-  border: 1px solid #49dcb1;
+  font-size: 14px;
+  color: white;
+  background-color: #608066;
+  border: 1px solid #58745c;
   border-radius: 5px;
   padding: 4px 8px;
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .tippy-box[data-theme~='tomato'] {
+    font-size: 14px;
+  }
+
+  .tippy-box[data-theme~='greentomato'] {
+    font-size: 14px;
+  }
+
+  .tippy-box[data-theme~='greentomato'] button {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .tippy-box[data-theme~='tomato'] {
+    font-size: 11px;
+  }
+
+  .tippy-box[data-theme~='greentomato'] {
+    font-size: 11px;
+  }
+
+  .tippy-box[data-theme~='greentomato'] button {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 300px) {
+  .tippy-box[data-theme~='tomato'] {
+    font-size: 8px;
+  }
+
+  .tippy-box[data-theme~='greentomato'] {
+    font-size: 8px;
+  }
+
+  .tippy-box[data-theme~='greentomato'] button {
+    font-size: 8px;
+  }
 }

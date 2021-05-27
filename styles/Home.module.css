@@ -14,6 +14,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.megatronContainer {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 400px) {
+  .main {
+    padding: 0.5rem 0;
+  }
+
+  .megatronContainer {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 475px) {
+  .main {
+    padding: 2rem 0;
+  }
 }
 
 .footer {
