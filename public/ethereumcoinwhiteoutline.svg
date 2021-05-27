@@ -48,7 +48,7 @@
        id="linearGradient4138"
        osb:paint="solid">
       <stop
-         style="stop-color:#d8fcff;stop-opacity:1;"
+         style="stop-color:#fffcff;stop-opacity:1;"
          offset="0"
          id="stop4136" />
     </linearGradient>
@@ -333,7 +333,7 @@
          transform="translate(742.85842,1969.2883)" />
     </g>
     <circle
-       style="fill:#6143ed;fill-opacity:1;stroke:#ffffff;stroke-width:2.11667;stroke-opacity:1"
+       style="fill:#6143ed;fill-opacity:1;stroke:#ffffff;stroke-width:1.05833333;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="path4017"
        cx="43.089287"
        cy="32.889545"

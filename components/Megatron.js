@@ -22,7 +22,6 @@ export default function Megatron({ isLoading, result, rplUsdPrice, ethRatio }) {
               <span className={styles.titleEthLogo}>
                 <img src="/ethereumcoinwhiteoutline.svg" width="100%" />
               </span>
-              {/* <span className={styles.titleEthLogo}>Ξ</span> */}
               <span className={styles.titleEthRatio}>{ethRatio}</span>
             </div>
           ) : null}

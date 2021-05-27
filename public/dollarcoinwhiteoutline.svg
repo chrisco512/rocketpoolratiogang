@@ -15,19 +15,18 @@
    version="1.1"
    id="svg896"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="dollarcoin.svg">
+   sodipodi:docname="dollarcoinwhiteoutline.svg">
   <defs
      id="defs890">
     <linearGradient
        id="linearGradient4231"
        osb:paint="solid">
       <stop
-         style="stop-color:#e1f4f9;stop-opacity:1;"
+         style="stop-color:#ffffff;stop-opacity:1;"
          offset="0"
          id="stop4229" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient4219"
        osb:paint="gradient">
       <stop
@@ -130,7 +129,7 @@
      id="layer1"
      transform="translate(-163.44207,-147.56082)">
     <circle
-       style="fill:#6a994e;fill-opacity:1;stroke:#ffffff;stroke-width:2.11667;stroke-opacity:1"
+       style="fill:#6a994e;fill-opacity:1;stroke:#ffffff;stroke-width:1.05833333;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="path4017-3"
        cx="183.15355"
        cy="167.27229"
