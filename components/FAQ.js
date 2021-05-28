@@ -47,7 +47,7 @@ function AccordionContainer() {
         open={activeIndex === 0}
         handleTriggerClick={handleClick}
         easing="ease-in-out"
-        transitionTime={300}
+        transitionTime={125}
         trigger={
           <div className={styles.faqHeader}>
             <span>What is Rocketpool?</span>
@@ -81,7 +81,7 @@ function AccordionContainer() {
         open={activeIndex === 1}
         handleTriggerClick={handleClick}
         easing="ease-in-out"
-        transitionTime={300}
+        transitionTime={125}
         trigger={
           <div className={styles.faqHeader}>
             <span>
@@ -122,7 +122,7 @@ function AccordionContainer() {
         open={activeIndex === 2}
         handleTriggerClick={handleClick}
         easing="ease-in-out"
-        transitionTime={300}
+        transitionTime={125}
         trigger={
           <div className={styles.faqHeader}>
             <span>When does Rocketpool launch on mainnet?</span>
@@ -158,7 +158,7 @@ function AccordionContainer() {
         open={activeIndex === 3}
         handleTriggerClick={handleClick}
         easing="ease-in-out"
-        transitionTime={300}
+        transitionTime={125}
         trigger={
           <div className={styles.faqHeader}>
             <span>What's with the 'ratio gang' thing?</span>
