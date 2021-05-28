@@ -1,0 +1,56 @@
+.container {
+  max-width: 800px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.faqSectionHeader {
+  text-align: center;
+}
+
+.faqHeader {
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faqHeader span {
+  flex-grow: 1;
+}
+
+.faqHeaderOpen {
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+  padding: 16px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faqHeaderOpen span {
+  flex-grow: 1;
+  color: rgb(249, 222, 26);
+}
+
+.faqContent {
+  padding: 8px 16px;
+}
+
+.faqContent a {
+  color: #fd6961;
+  margin: 0 4px;
+  font-weight: bold;
+}
+
+.faqContent a:hover {
+  text-decoration: underline;
+}

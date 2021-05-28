@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light-border.css';
+
 import '../styles/globals.css';
 
 import ParallaxImage from '../components/ParallaxImage';
