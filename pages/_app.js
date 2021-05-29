@@ -11,23 +11,43 @@ function MyApp({ Component, pageProps }) {
 
   // Used for background image size adjustments
   useEffect(() => {
-    function setDocHeightToScrollHeight() {
-      setDocHeight(window ? document.body.scrollHeight : '100%');
+    function debounce(func, wait, immediate) {
+      var timeout;
+      return function() {
+        var context = this,
+          args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
     }
 
-    setDocHeightToScrollHeight();
-    window.addEventListener('resize', setDocHeightToScrollHeight);
+    const setDocHeightToClientHeight = debounce(clientHeight => {
+      setDocHeight(clientHeight);
+    }, 150);
 
-    return () =>
-      window.removeEventListener('resize', setDocHeightToScrollHeight);
+    const resizeObserver = new ResizeObserver(entries => {
+      console.log('Body height changed:', entries[0].target.clientHeight);
+
+      setDocHeightToClientHeight(entries[0].target.clientHeight);
+    });
+
+    resizeObserver.observe(document.body);
   }, []);
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <ParallaxImage
         offsetAdd={4}
         top={0}
         left={0}
+        right={0}
+        bottom={0}
         width="100%"
         height={docHeight}
         position="absolute"

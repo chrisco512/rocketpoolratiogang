@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Collapsible from 'react-collapsible';
 
 import styles from './FAQ.module.css';
@@ -39,6 +39,13 @@ function AccordionContainer() {
       accordionPosition === activeIndex ? -1 : accordionPosition;
     setActiveIndex(newPosition);
   }
+
+  // useEffect(
+  //   () => {
+  //     window.dispatchEvent(new Event('resize'));
+  //   },
+  //   [activeIndex]
+  // );
 
   return (
     <div className={styles.container}>

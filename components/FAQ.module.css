@@ -29,9 +29,7 @@
   font-weight: bold;
   user-select: none;
   padding: 16px;
-  border-top: 1px solid #fd6961;
-  border-left: 1px solid #fd6961;
-  border-right: 1px solid #fd6961;
+  border: 1px solid #fd6961;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   cursor: pointer;
@@ -47,7 +45,9 @@
 
 .faqContent {
   padding: 8px 16px;
-  border: 1px solid #fd6961;
+  border-bottom: 1px solid #fd6961;
+  border-left: 1px solid #fd6961;
+  border-right: 1px solid #fd6961;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }

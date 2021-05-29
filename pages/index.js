@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Collapsible from 'react-collapsible';
 import { useState } from 'react';
 
+import Links from '../components/Links';
 import FAQ from '../components/FAQ';
 import Megatron from '../components/Megatron';
 import RangeSlider from '../components/RangeSlider';
@@ -67,6 +68,9 @@ export default function Home() {
         </div>
         <div style={{ marginTop: 100, marginBottom: 80 }}>
           <FAQ />
+        </div>
+        <div style={{ marginTop: 100, marginBottom: 80 }}>
+          <Links />
         </div>
       </main>
 
