@@ -32,7 +32,6 @@
   margin-top: 1px;
   margin-left: 5px;
   cursor: pointer;
-  transition: all 3s;
 }
 
 .slider::-moz-range-thumb {
