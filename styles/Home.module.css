@@ -21,6 +21,24 @@
   margin-bottom: 32px;
 }
 
+.tokenInfo {
+  font-size: 20px;
+  font-style: italic;
+  max-width: 800px;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.tokenInfo a {
+  color: #fd6961;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tokenInfo a:hover {
+  color: rgb(249, 222, 26);
+}
+
 @media (max-width: 400px) {
   .main {
     padding: 0.5rem 0;

@@ -1,26 +1,16 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Collapsible from 'react-collapsible';
-import { useState } from 'react';
 import useSWR from 'swr';
 
 import Links from '../components/Links';
 import FAQ from '../components/FAQ';
 import Megatron from '../components/Megatron';
 import RangeSlider from '../components/RangeSlider';
-import usePromise from '../lib/hooks/usePromise';
 import styles from '../styles/Home.module.css';
 
 const fetcher = (...args) => fetch(...args).then(res => res.json());
 
 export default function Home() {
-  // const [result, error, isLoading] = usePromise(() =>
-  //   fetch(
-  //     `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool,ethereum&vs_currencies=eth%2Cusd`
-  //   ).then(r => r.json())
-  // );
-
-  const { data, error, isValidating } = useSWR(
+  const { data } = useSWR(
     `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool,ethereum&vs_currencies=eth%2Cusd`,
     fetcher,
     {
@@ -80,6 +70,33 @@ export default function Home() {
         </div>
         <div style={{ marginTop: 32, marginBottom: 32 }}>
           <Links />
+        </div>
+        <div
+          style={{ marginTop: 32, marginBottom: 32 }}
+          className={styles.tokenInfo}
+        >
+          <p style={{ fontWeight: 18, lineHeight: 1.6 }}>
+            The RPL token can be purchased on{' '}
+            <a
+              href="https://app.uniswap.org/#/swap?inputCurrency=0xb4efd85c19999d84251304bda99e90b92300bd93&outputCurrency=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+              target="_blank"
+            >
+              Uniswap
+            </a>{' '}
+            or{' '}
+            <a
+              href="https://app.bancor.network/eth/swap?from=0xB4EFd85c19999D84251304bDA99E90B92300Bd93&to=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C"
+              target="_blank"
+            >
+              Bancor
+            </a>. For more info on the token price and history, visit{' '}
+            <a
+              href="https://www.coingecko.com/en/coins/rocket-pool"
+              target="_blank"
+            >
+              CoinGecko
+            </a>.
+          </p>
         </div>
       </main>
 
