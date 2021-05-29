@@ -49,7 +49,14 @@ function AccordionContainer() {
         easing="ease-in-out"
         transitionTime={125}
         trigger={
-          <div className={styles.faqHeader}>
+          <div
+            className={styles.faqHeader}
+            style={
+              activeIndex !== 1
+                ? { borderBottom: '1px solid rgba(255,255,255, 0.7)' }
+                : {}
+            }
+          >
             <span>What is Rocketpool?</span>
             <ChevronDown />
           </div>
@@ -83,7 +90,14 @@ function AccordionContainer() {
         easing="ease-in-out"
         transitionTime={125}
         trigger={
-          <div className={styles.faqHeader}>
+          <div
+            className={styles.faqHeader}
+            style={
+              activeIndex !== 2
+                ? { borderBottom: '1px solid rgba(255,255,255, 0.7)' }
+                : {}
+            }
+          >
             <span>
               Why is Rocketpool an important part of the ETH2 ecosystem?
             </span>
@@ -124,7 +138,14 @@ function AccordionContainer() {
         easing="ease-in-out"
         transitionTime={125}
         trigger={
-          <div className={styles.faqHeader}>
+          <div
+            className={styles.faqHeader}
+            style={
+              activeIndex !== 3
+                ? { borderBottom: '1px solid rgba(255,255,255, 0.7)' }
+                : {}
+            }
+          >
             <span>When does Rocketpool launch on mainnet?</span>
             <ChevronDown />
           </div>
@@ -160,7 +181,14 @@ function AccordionContainer() {
         easing="ease-in-out"
         transitionTime={125}
         trigger={
-          <div className={styles.faqHeader}>
+          <div
+            className={styles.faqHeader}
+            style={
+              activeIndex !== 4
+                ? { borderBottom: '1px solid rgba(255,255,255, 0.7)' }
+                : {}
+            }
+          >
             <span>What's with the 'ratio gang' thing?</span>
             <ChevronDown />
           </div>

@@ -13,7 +13,7 @@
   font-weight: bold;
   user-select: none;
   padding: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.7); */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -29,7 +29,11 @@
   font-weight: bold;
   user-select: none;
   padding: 16px;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #fd6961;
+  border-left: 1px solid #fd6961;
+  border-right: 1px solid #fd6961;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -43,6 +47,9 @@
 
 .faqContent {
   padding: 8px 16px;
+  border: 1px solid #fd6961;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .faqContent a {
