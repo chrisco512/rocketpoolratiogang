@@ -1,6 +1,6 @@
 import styles from './Megatron.module.css';
 
-export default function Megatron({ isLoading, result, rplUsdPrice, ethRatio }) {
+export default function Megatron({ result, rplUsdPrice, ethRatio }) {
   return (
     <div className={styles.megatron}>
       <div className={styles.titleContainer}>
@@ -17,7 +17,7 @@ export default function Megatron({ isLoading, result, rplUsdPrice, ethRatio }) {
 
       <div className={styles.titleMoneyContainer}>
         <div className={styles.titleEthContainer}>
-          {!isLoading && result ? (
+          {result ? (
             <div className={styles.titleEthContent}>
               <span className={styles.titleEthLogo}>
                 <img src="/ethereumcoinwhiteoutline.svg" width="100%" />
@@ -27,7 +27,7 @@ export default function Megatron({ isLoading, result, rplUsdPrice, ethRatio }) {
           ) : null}
         </div>
         <div className={styles.titleDollarContainer}>
-          {!isLoading && result ? (
+          {result ? (
             <div className={styles.titleDollarContent}>
               <span className={styles.titleDollarLogo}>
                 <img src="/dollarcoinwhiteoutline.svg" width="100%" />

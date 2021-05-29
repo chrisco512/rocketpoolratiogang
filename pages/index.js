@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Collapsible from 'react-collapsible';
 import { useState } from 'react';
+import useSWR from 'swr';
 
 import Links from '../components/Links';
 import FAQ from '../components/FAQ';
@@ -10,19 +11,29 @@ import RangeSlider from '../components/RangeSlider';
 import usePromise from '../lib/hooks/usePromise';
 import styles from '../styles/Home.module.css';
 
+const fetcher = (...args) => fetch(...args).then(res => res.json());
+
 export default function Home() {
-  const [result, error, isLoading] = usePromise(() =>
-    fetch(
-      `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool,ethereum&vs_currencies=eth%2Cusd`
-    ).then(r => r.json())
+  // const [result, error, isLoading] = usePromise(() =>
+  //   fetch(
+  //     `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool,ethereum&vs_currencies=eth%2Cusd`
+  //   ).then(r => r.json())
+  // );
+
+  const { data, error, isValidating } = useSWR(
+    `https://api.coingecko.com/api/v3/simple/price?ids=rocket-pool,ethereum&vs_currencies=eth%2Cusd`,
+    fetcher,
+    {
+      refreshInterval: 5000,
+    }
   );
 
   let ethRatio, rplUsdPrice, ethUsdPrice;
 
-  if (result && !isLoading) {
-    ethRatio = result['rocket-pool'].eth.toFixed(6);
-    rplUsdPrice = result['rocket-pool'].usd;
-    ethUsdPrice = result['ethereum'].usd;
+  if (data) {
+    ethRatio = data['rocket-pool'].eth.toFixed(6);
+    rplUsdPrice = data['rocket-pool'].usd;
+    ethUsdPrice = data['ethereum'].usd;
   }
 
   return (
@@ -44,8 +55,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.megatronContainer}>
           <Megatron
-            isLoading={isLoading}
-            result={result}
+            result={data}
             rplUsdPrice={rplUsdPrice}
             ethRatio={ethRatio}
           />
@@ -62,8 +72,7 @@ export default function Home() {
             ethRatio={ethRatio}
             ethUsdPrice={ethUsdPrice}
             rplUsdPrice={rplUsdPrice}
-            isLoading={isLoading}
-            result={result}
+            result={data}
           />
         </div>
         <div style={{ marginTop: 32, marginBottom: 32 }}>

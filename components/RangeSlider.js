@@ -94,7 +94,6 @@ function ThumbTippy({
   rplUsdPrice,
   ethUsdPrice,
   reset,
-  isLoading,
   result,
   sliderTwoPercentage,
 }) {
@@ -119,7 +118,7 @@ function ThumbTippy({
       }
       theme={touched ? 'greentomato' : 'tomato'}
       offset={[0, 30]}
-      visible={!isLoading && result}
+      visible={result}
       placement="top"
       interactive={true}
       moveTransition="none"
@@ -144,7 +143,6 @@ export default function RangeSlider({
   ethRatio = 0,
   ethUsdPrice,
   rplUsdPrice,
-  isLoading = true,
   result,
 }) {
   const [sliderTwo, setSliderTwo] = useState(ethRatio * 1000);
@@ -197,7 +195,6 @@ export default function RangeSlider({
         rplUsdPrice={rplUsdPrice}
         ethUsdPrice={ethUsdPrice}
         reset={reset}
-        isLoading={isLoading}
         result={result}
         sliderTwoPercentage={sliderTwoPercentage}
       />
