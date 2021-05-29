@@ -52,8 +52,8 @@ export default function Home() {
         </div>
         <div
           style={{
-            marginTop: 120,
-            marginBottom: 152,
+            marginTop: 192,
+            marginBottom: 192,
             width: '100%',
             maxWidth: 640,
           }}
@@ -66,19 +66,28 @@ export default function Home() {
             result={result}
           />
         </div>
-        <div style={{ marginTop: 100, marginBottom: 80 }}>
+        <div style={{ marginTop: 32, marginBottom: 32 }}>
           <FAQ />
         </div>
-        <div style={{ marginTop: 100, marginBottom: 80 }}>
+        <div style={{ marginTop: 32, marginBottom: 32 }}>
           <Links />
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <div>Tip jar: TheRocketman.eth</div>
-        <div>Join the conversation in `/r/rocketpool` or on `Discord`.</div>
-        <div>Join the conversation in `/r/rocketpool` or on `Discord`.</div>
-        <div>This project is open-source. Source code available on GitHub.</div>
+        <div>
+          <strong>Tip jar:</strong> <code>TheRocketman.eth</code> or{' '}
+          <code>0xa2586DCeD56534FFBC903ea314C6D022f7ba306E</code>
+        </div>
+        <div>
+          This project is open-source. Source code available on{' '}
+          <a
+            href="https://github.com/chrisco255/rocketpoolratiogang"
+            target="_blank"
+          >
+            GitHub
+          </a>.
+        </div>
       </footer>
     </div>
   );

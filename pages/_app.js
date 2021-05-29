@@ -32,8 +32,6 @@ function MyApp({ Component, pageProps }) {
     }, 150);
 
     const resizeObserver = new ResizeObserver(entries => {
-      console.log('Body height changed:', entries[0].target.clientHeight);
-
       setDocHeightToClientHeight(entries[0].target.clientHeight);
     });
 
