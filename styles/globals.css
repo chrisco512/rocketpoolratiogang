@@ -12,6 +12,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 1024px) {
+  html,
+  body {
+    background-size: 1024px;
+  }
+}
+
 h1,
 h2,
 h3,
