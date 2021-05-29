@@ -6,9 +6,8 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background-image: url('/milkystuff.svg');
-  background-size: cover;
+  background-size: 100%;
   background-repeat: repeat-y;
-  /* background-attachment: fixed; */
   background-position: center top;
   overflow-x: hidden;
 }

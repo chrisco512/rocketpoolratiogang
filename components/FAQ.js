@@ -32,7 +32,7 @@ function ChevronUp() {
 }
 
 function AccordionContainer() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   function handleClick(accordionPosition) {
     const newPosition =
