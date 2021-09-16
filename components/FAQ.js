@@ -166,10 +166,15 @@ function AccordionContainer() {
       >
         <div className={styles.faqContent}>
           <p>
-            Rocketpool is expected to launch in Q2 2021. The Rocketpool v2.5
-            public beta is live now (with over 2000 node operators) and is
-            undergoing several rounds of audits. Once the audits are complete, a
-            mainnet launch date will be announced. Follow the team on
+            Rocketpool will be launching October 6th, 2021! For more details
+            about the launch, check out the{' '}
+            <a
+              href="https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-4-2635c44e4f7e?source=collection_home---4------0-----------------------"
+              target="_blank"
+            >
+              most recent article
+            </a>{' '}
+            from the team. And follow along with the community on
             <a href="https://twitter.com/Rocket_Pool" target="_blank">
               Twitter
             </a>
